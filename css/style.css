@@ -523,6 +523,10 @@ body::after {
   position: absolute;
   right: -250px
 }
+.footer__image {
+  width: 100%;
+  max-width: 243.538px
+}
 .footer__star {
   position: absolute;
   transition: 2.4s;
@@ -931,7 +935,8 @@ body::after {
   align-items: flex-start
 }
 .hero__image {
-  max-width: 611px
+  max-width: 611px;
+  width: 100%
 }
 .hero__img {
   width: 100%
@@ -1801,7 +1806,18 @@ body::after {
   font-weight: 700;
   line-height: 29px;
   color: #fff;
-  text-align: center
+  text-align: center;
+  z-index: 2
+}
+.services-slide__image {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin-top: -30px
+}
+.with-1 {
+  width: 257px;
+  height: 257px
 }
 .treatment {
   background: #60bbdc
@@ -1958,6 +1974,7 @@ body::after {
 .call__img {
   z-index: 2;
   position: relative;
+  max-width: 343.987px;
   width: 100%
 }
 .call__container {
@@ -1992,6 +2009,9 @@ body::after {
 .call__btn:hover {
   color: #fff;
   background: #d3afd1
+}
+.call-with {
+  max-width: 217.406px
 }
 .cloud__call-1 {
   width: 198px;
@@ -2322,6 +2342,8 @@ body::after {
   left: 40px
 }
 .contactus__image {
+  max-width: 184.859px;
+  width: 100%;
   z-index: 2;
   position: relative
 }
@@ -2363,6 +2385,9 @@ body::after {
 .contactus__btn:hover {
   background: #d3afd1;
   color: #fff
+}
+.contactus-with {
+  max-width: 277px
 }
 .cloud__contactus-1 {
   width: 374px;
@@ -2666,10 +2691,10 @@ body::after {
   animation: star-glow 3.2s ease-in-out infinite
 }
 .price__actions {
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   -webkit-column-gap: 55px;
   -moz-column-gap: 55px;
   column-gap: 55px
@@ -3179,7 +3204,11 @@ summary::-webkit-details-marker {
   }
   .about__image {
     width: 300px;
-    left: 10%
+    left: 0
+  }
+  .about__img {
+    left: 10px;
+    top: 40px
   }
   .about__btn {
     z-index: 1
@@ -3188,7 +3217,7 @@ summary::-webkit-details-marker {
     row-gap: 12px;
     max-width: 320px;
     height: 346px;
-    padding: 31px 15px 43px 20px
+    padding: 31px 12px 43px 13px
   }
   .slide-about__title {
     font-size: 18px;
@@ -3240,7 +3269,8 @@ summary::-webkit-details-marker {
   }
   .services__price {
     font-size: 14px;
-    line-height: 24px
+    line-height: 24px;
+    padding: 8px 24px
   }
   .services__slider {
     display: none
@@ -3260,7 +3290,12 @@ summary::-webkit-details-marker {
   }
   .services-slide__image {
     max-width: 100%;
-    width: 80%
+    width: 80%;
+    margin-top: 0
+  }
+  .with-1 {
+    width: 190px!important;
+    height: auto
   }
   .diagnostic .services-slide__image {
     width: 60%
@@ -3700,6 +3735,22 @@ summary::-webkit-details-marker {
   .about__slide {
     max-width: 100%;
     height: auto
+  }
+  .star-1 {
+    left: 251px;
+    bottom: 1px
+  }
+  .star-4 {
+    right: 110px
+  }
+  .star-5 {
+    right: 12px
+  }
+  .star-6 {
+    right: 45px
+  }
+  .star-7 {
+    right: 35px
   }
 }
 @media (any-hover:none) {

@@ -4328,8 +4328,14 @@
                     360: {
                         slidesPerView: 1.25
                     },
-                    430: {
+                    390: {
+                        slidesPerView: 1.4
+                    },
+                    425: {
                         slidesPerView: 1.5
+                    },
+                    460: {
+                        slidesPerView: 1.6
                     },
                     500: {
                         slidesPerView: 1.7
@@ -4811,6 +4817,12 @@
             phoneElement.addEventListener("blur", (event => {
                 handlePhoneInput(event, phoneElement);
             }));
+        }));
+    }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        const paragraphs = document.querySelectorAll("p");
+        paragraphs.forEach((p => {
+            p.innerHTML = p.innerHTML.replace(/(\s)([а-яА-ЯїЇєЄіІґҐa-zA-Z]{1,3})\s/g, "$1$2&nbsp;");
         }));
     }));
     window["FLS"] = true;
