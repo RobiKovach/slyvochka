@@ -396,7 +396,7 @@ body::after {
 }
 .bubbles {
   position: absolute;
-  height: 130px;
+  height: 110px;
   inset: 0;
   pointer-events: none;
   z-index: -1;
@@ -1819,6 +1819,10 @@ body::after {
   width: 257px;
   height: 257px
 }
+.with-2 {
+  width: 257px;
+  height: 257px
+}
 .treatment {
   background: #60bbdc
 }
@@ -2095,6 +2099,7 @@ body::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 20px
 }
 .header-faq__title {
@@ -2939,7 +2944,7 @@ summary::-webkit-details-marker {
     display: flex
   }
   .bubbles {
-    height: 100px
+    height: 80px
   }
   .bubbles .bubble.bubble-1 {
     width: 20%
@@ -3278,7 +3283,7 @@ summary::-webkit-details-marker {
   .services__slide {
     max-width: 100%;
     width: 100%;
-    height: auto
+    height: 220px
   }
   .title {
     font-size: 22px;
@@ -3294,8 +3299,14 @@ summary::-webkit-details-marker {
     margin-top: 0
   }
   .with-1 {
-    width: 190px!important;
-    height: auto
+    width: 180px!important;
+    height: auto;
+    margin-top: -10px
+  }
+  .with-2 {
+    width: 180px!important;
+    height: auto;
+    margin-top: -20px
   }
   .diagnostic .services-slide__image {
     width: 60%
@@ -3731,7 +3742,7 @@ summary::-webkit-details-marker {
 }
 @media (max-width:29.99875em) {
   .bubbles {
-    height: 75px
+    height: 65px
   }
   .about__slide {
     max-width: 100%;
