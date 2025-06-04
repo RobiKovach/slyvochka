@@ -4820,30 +4820,21 @@
         }));
     }));
     document.addEventListener("DOMContentLoaded", (() => {
-        const targets = document.querySelectorAll("p");
         const regex = /(\s|^)(з|у|і|й|а|в|на|до|та|що|при|щоб|[а-яА-ЯїЇєЄіІґҐ]{1,3})(\s)/gi;
-        targets.forEach((el => {
-            el.childNodes.forEach((node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    const replaced = node.textContent.replace(regex, ((_, before, word, after) => `${before}${word} `));
-                    node.textContent = replaced;
-                }
+        function processElements(selectors, onlyMobile = false) {
+            if (onlyMobile && window.innerWidth > 768) return;
+            document.querySelectorAll(selectors).forEach((el => {
+                el.childNodes.forEach((node => {
+                    if (node.nodeType === Node.TEXT_NODE) {
+                        const replaced = node.textContent.replace(regex, ((_, before, word, after) => `${before}${word} `));
+                        node.textContent = replaced;
+                    }
+                }));
             }));
-        }));
-    }));
-    document.addEventListener("DOMContentLoaded", (() => {
-        const isMobile = window.innerWidth <= 768;
-        if (!isMobile) return;
-        const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
-        const regex = /(\s|^)(з|у|і|й|а|в|на|до|та|що|при|щоб|[а-яА-ЯїЇєЄіІґҐ]{1,3})(\s)/gi;
-        headings.forEach((el => {
-            el.childNodes.forEach((node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                    const replaced = node.textContent.replace(regex, ((_, before, word, after) => `${before}${word} `));
-                    node.textContent = replaced;
-                }
-            }));
-        }));
+        }
+        processElements("p");
+        processElements("h1, h2, h3, h4, h5, h6", true);
+        processElements("span", true);
     }));
     window["FLS"] = true;
     menuInit();
