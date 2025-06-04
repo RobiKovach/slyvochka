@@ -2797,8 +2797,8 @@ html {
   right: 220px;
   top: 15px
 }
-details>summary:first-of-type {
-  list-style: none
+summary::-webkit-details-marker {
+  display: none
 }
 .swiper {
   overflow: hidden
