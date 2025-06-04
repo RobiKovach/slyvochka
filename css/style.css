@@ -2797,6 +2797,9 @@ html {
   right: 220px;
   top: 15px
 }
+details>summary:first-of-type {
+  list-style: none
+}
 .swiper {
   overflow: hidden
 }
@@ -3564,7 +3567,7 @@ html {
     right: -40px
   }
   .popup-bubles {
-    height: 45px
+    height: 45px!important
   }
   .form-questions__body {
     row-gap: 10px
