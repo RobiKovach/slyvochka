@@ -3396,7 +3396,8 @@ summary::-webkit-details-marker {
     width: 127.205px
   }
   .amin-faq__cloud2 {
-    width: 207.719px
+    width: 207.719px;
+    top: -10px!important
   }
   .faq-star1 {
     display: none

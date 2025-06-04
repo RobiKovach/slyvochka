@@ -4819,10 +4819,30 @@
             }));
         }));
     }));
-    document.addEventListener("DOMContentLoaded", (function() {
-        const paragraphs = document.querySelectorAll("p");
-        paragraphs.forEach((p => {
-            p.innerHTML = p.innerHTML.replace(/(\s)([а-яА-ЯїЇєЄіІґҐa-zA-Z]{1,3})\s/g, "$1$2&nbsp;");
+    document.addEventListener("DOMContentLoaded", (() => {
+        const targets = document.querySelectorAll("p");
+        const regex = /(\s|^)(з|у|і|й|а|в|на|до|та|що|при|щоб|[а-яА-ЯїЇєЄіІґҐ]{1,3})(\s)/gi;
+        targets.forEach((el => {
+            el.childNodes.forEach((node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const replaced = node.textContent.replace(regex, ((_, before, word, after) => `${before}${word} `));
+                    node.textContent = replaced;
+                }
+            }));
+        }));
+    }));
+    document.addEventListener("DOMContentLoaded", (() => {
+        const isMobile = window.innerWidth <= 768;
+        if (!isMobile) return;
+        const headings = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        const regex = /(\s|^)(з|у|і|й|а|в|на|до|та|що|при|щоб|[а-яА-ЯїЇєЄіІґҐ]{1,3})(\s)/gi;
+        headings.forEach((el => {
+            el.childNodes.forEach((node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    const replaced = node.textContent.replace(regex, ((_, before, word, after) => `${before}${word} `));
+                    node.textContent = replaced;
+                }
+            }));
         }));
     }));
     window["FLS"] = true;
